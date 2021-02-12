@@ -17,4 +17,4 @@ export default class BaseModel {
     getRelationData (name) {
       return (this.relations[name]) ? this.relations[name].data : null
     }
-  }
+}

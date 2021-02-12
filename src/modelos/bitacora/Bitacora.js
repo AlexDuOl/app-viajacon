@@ -7,10 +7,8 @@ class Bitacora extends BaseModel {
     constructor(data){
         super(data)
 
-        this.tiempoInicial = this.getAttribute('tiempoInicial').slice(11)
-        this.tiempoFinal = this.getAttribute('tiempoFinal').slice(11)
-        this.fechaInicial = this.getAttribute('tiempoInicial').slice(0,-9)
-        this.fechaFinal = this.getAttribute('tiempoFinal').slice(0,-9)
+        this.tiempoInicial = this.getAttribute('tiempoInicial')
+        this.tiempoFinal = this.getAttribute('tiempoFinal')
     }
 
     /** @returns {Proveedor} */

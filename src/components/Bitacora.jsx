@@ -13,8 +13,8 @@ const BitacoraComponent = (props) => (
             <Grid.Row>
                 <Grid.Column width={8} className="col-bitacora">
                     <Header as='h4'><Icon className="map marker alternate orange" size='large' />Punto de partida</Header>
-                    <p><span>Fecha: </span>{props.fechaInicial}</p>
-                    <p><span>Hora: </span>{props.tiempoInicial}</p>
+                    <p><span>Fecha: </span>{props.fechaInicialValidado}</p>
+                    <p><span>Hora: </span>{props.tiempoInicialValidado}</p>
                     <p><span>Lugar: </span></p>
                     <p><span>Dirección: </span></p>
                     <p><span>Comentarios: </span></p>
@@ -22,8 +22,8 @@ const BitacoraComponent = (props) => (
 
                 <Grid.Column width={8} className="col-bitacora">
                     <Header as='h4'><Icon className="map marker alternate orange" size='large' />Punto de destino</Header>
-                    <p><span>Fecha: </span>{props.fechaFinal}</p>
-                    <p><span>Hora: </span>{props.tiempoFinal}</p>
+                    <p><span>Fecha: </span>{props.fechaInicialValidado}</p>
+                    <p><span>Hora: </span>{props.tiempoFinalValidado}</p>
                     <p><span>Lugar: </span></p>
                     <p><span>Dirección: </span></p>
                     <p><span>Comentarios: </span></p>

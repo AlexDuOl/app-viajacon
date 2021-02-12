@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import axios from 'axios'
 import Bitacora from '../modelos/bitacora/Bitacora'
 import BitacoraComponent from '../components/Bitacora'
+import { ValidarFecha } from '../helpers/regex'
 
 class BitacoraContainer extends Component {
     constructor(props) {
@@ -26,7 +27,7 @@ class BitacoraContainer extends Component {
     render() {
         /** @type {Bitacora} */
         const bitacora = this.state.bitacora
-        
+     
         if(!bitacora) {
             return (
                 <div>
@@ -34,14 +35,13 @@ class BitacoraContainer extends Component {
                 </div>
             )
         } else {
+            ValidarFecha(bitacora.tiempoInicial, bitacora.tiempoFinal)
+
             return (
                 <BitacoraComponent 
                     modalidad={bitacora.modalidad} 
-                    fecha={bitacora.fecha}
                     tiempoInicial={bitacora.tiempoInicial}
                     tiempoFinal={bitacora.tiempoFinal}
-                    fechaInicial={bitacora.fechaInicial}
-                    fechaFinal={bitacora.fechaFinal}
                     operador={bitacora.getOperador()}
                     unidad={bitacora.getUnidad()}
                 />

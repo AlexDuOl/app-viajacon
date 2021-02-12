@@ -9,20 +9,15 @@ class Especial extends BaseModel {
 
         this.tipo = this.getAttribute('tipo')
         this.contactoNombre = this.getAttribute('contactoNombre')
-        this.contactoEmail = this.getAttribute('contactoEmail').toLowerCase()
+        this.contactoEmail = this.getAttribute('contactoEmail')
         this.contactoNumeroCelular = this.getAttribute('contactoNumeroCelular')
         this.contactoNumeroTelefono = this.getAttribute('contactoNumeroTelefono')
         this.contratoWeb = this.getAttribute('contratoWeb')
-        this.lugarOrigen = this.getAttribute('lugarOrigen').toLowerCase()
-        this.direccionOrigen = this.getAttribute('direccionOrigen').toLowerCase()
-        this.lugarDestino = this.getAttribute('lugarDestino').toLowerCase()
-        this.direccionDestino = this.getAttribute('direccionDestino').toLowerCase()
-        // this.tiempoInicial = this.getAttribute('tiempoInicial').slice(11)
-        // this.tiempoFinal = this.getAttribute('tiempoFinal').slice(11)
-        // this.fechaInicial = this.getAttribute('tiempoInicial').slice(0,-9)
-        // this.fechaFinal = this.getAttribute('tiempoFinal').slice(0,-9)
-      }
-
+        this.lugarOrigen = this.getAttribute('lugarOrigen')
+        this.direccionOrigen = this.getAttribute('direccionOrigen')
+        this.lugarDestino = this.getAttribute('lugarDestino')
+        this.direccionDestino = this.getAttribute('direccionDestino')
+    }
       
     /** @returns {Cliente} */
     getCliente(){
